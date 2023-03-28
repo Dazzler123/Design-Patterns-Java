@@ -1,6 +1,7 @@
 package Observer_Pattern;
 
 import Observer_Pattern.service.impl.Jack;
+import Observer_Pattern.service.impl.Peter;
 import Observer_Pattern.service.impl.Tom;
 
 public class Main {
@@ -17,11 +18,11 @@ public class Main {
 
         //Initialize two Observers
         Jack jack = new Jack();
-        Ramal ramal = new Ramal();
+        Peter peter = new Peter();
 
-        //Register observers to the Subject
+        //Register observers to the Subject (adding to the observer arraylist of Tom)
         tom.register(jack);
-        tom.register(ramal);
+        tom.register(peter);
 
 
         //tom sends a message

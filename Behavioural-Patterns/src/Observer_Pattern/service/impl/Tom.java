@@ -21,6 +21,7 @@ public class Tom implements Subject {
     @Override
     public void notifyAllObservers(String message) {
         for (Observer allObserver : allObservers) {
+            //calls the update method in all observers
             allObserver.update(message);
         }
     }
