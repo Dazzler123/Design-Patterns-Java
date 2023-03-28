@@ -1,5 +1,6 @@
 package Observer_Pattern;
 
+import Observer_Pattern.service.impl.Jack;
 import Observer_Pattern.service.impl.Tom;
 
 public class Main {
@@ -15,15 +16,15 @@ public class Main {
         Tom tom = new Tom();
 
         //Initialize two Observers
-        Dasun dasun = new Dasun();
+        Jack jack = new Jack();
         Ramal ramal = new Ramal();
-        Sithum sithum = new Sithum();
 
         //Register observers to the Subject
-        tom.register(dasun);
+        tom.register(jack);
         tom.register(ramal);
-        tom.register(sithum);
 
+
+        //tom sends a message
         //Now see what will happen after the subject states changed
         tom.notifyAllObservers("Kamali Uploaded a New Photo");
         tom.notifyAllObservers("Kamali left the chat");
