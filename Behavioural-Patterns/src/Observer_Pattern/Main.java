@@ -1,5 +1,7 @@
 package Observer_Pattern;
 
+import Observer_Pattern.service.impl.Tom;
+
 public class Main {
     /* ========  Observer Design Pattern  ========*/
     /*
@@ -9,7 +11,8 @@ public class Main {
     public static void main(String[] args) {
 
         //Initialize the Subject
-        Kamali kamali = new Kamali();
+        //he's the one who messages others here in this case scenario
+        Tom tom = new Tom();
 
         //Initialize two Observers
         Dasun dasun = new Dasun();
@@ -17,13 +20,13 @@ public class Main {
         Sithum sithum = new Sithum();
 
         //Register observers to the Subject
-        kamali.register(dasun);
-        kamali.register(ramal);
-        kamali.register(sithum);
+        tom.register(dasun);
+        tom.register(ramal);
+        tom.register(sithum);
 
         //Now see what will happen after the subject states changed
-        kamali.notifyAllObservers("Kamali Uploaded a New Photo");
-        kamali.notifyAllObservers("Kamali left the chat");
+        tom.notifyAllObservers("Kamali Uploaded a New Photo");
+        tom.notifyAllObservers("Kamali left the chat");
 
     }
 }
