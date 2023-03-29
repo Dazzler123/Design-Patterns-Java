@@ -18,6 +18,6 @@ public class Customer implements CRUDFacade{
 
     @Override
     public void getAll() {
-        System.out.println("All Customer details loaded.");
+        System.out.println("All Customers loaded.");
     }
 }
