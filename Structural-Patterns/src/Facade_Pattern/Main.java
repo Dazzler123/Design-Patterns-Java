@@ -1,5 +1,8 @@
 package Facade_Pattern;
 
+import Facade_Pattern.impl.CustomerImpl;
+import Facade_Pattern.impl.ItemImpl;
+
 public class Main {
 
     //======== Facade Design Pattern =========
@@ -17,14 +20,14 @@ public class Main {
      */
 
     public static void main(String[] args) {
-        CRUDFacade customer = new Customer();
+        CRUDFacade customer = new CustomerImpl();
         customer.save("Dazzler");
         customer.update("Dazzler");
         customer.delete("D001");
 
         System.out.println("========================================");
 
-        CRUDFacade item = new Item();
+        CRUDFacade item = new ItemImpl();
         item.save("Biscuits");
         item.update("Biscuits");
         item.delete("ITM-001");

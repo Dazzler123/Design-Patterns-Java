@@ -1,6 +1,8 @@
-package Facade_Pattern;
+package Facade_Pattern.impl;
 
-public class Item implements CRUDFacade{
+import Facade_Pattern.CRUDFacade;
+
+public class ItemImpl implements CRUDFacade {
     @Override
     public void save(String name) {
         System.out.println("Item " + name + " Saved.");
