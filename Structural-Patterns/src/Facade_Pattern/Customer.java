@@ -2,18 +2,18 @@ package Facade_Pattern;
 
 public class Customer implements CRUDFacade{
     @Override
-    public void save() {
-        System.out.println("Customer Saved.");
+    public void save(String name) {
+        System.out.println("Customer " + name + " Saved.");
     }
 
     @Override
-    public void update() {
-        System.out.println("Customer details updated.");
+    public void update(String name) {
+        System.out.println("Customer " + name + " updated.");
     }
 
     @Override
-    public void delete() {
-        System.out.println("Customer deleted.");
+    public void delete(String id) {
+        System.out.println("Customer " + id + " deleted.");
     }
 
     @Override
