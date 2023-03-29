@@ -1,8 +1,8 @@
 package Facade_Pattern.impl;
 
-import Facade_Pattern.CRUDFacade;
+import Facade_Pattern.Item;
 
-public class ItemImpl implements CRUDFacade {
+public class ItemImpl implements Item {
     @Override
     public void save(String name) {
         System.out.println("Item " + name + " Saved.");
@@ -21,5 +21,10 @@ public class ItemImpl implements CRUDFacade {
     @Override
     public void getAll() {
         System.out.println("All Items loaded.");
+    }
+
+    @Override
+    public void findByQtyOnHand(double qty) {
+        System.out.println(qty + " packets of Malibun Biscuit found.");
     }
 }

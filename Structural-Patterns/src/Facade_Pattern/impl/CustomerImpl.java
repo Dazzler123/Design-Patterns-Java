@@ -1,8 +1,8 @@
 package Facade_Pattern.impl;
 
-import Facade_Pattern.CRUDFacade;
+import Facade_Pattern.Customer;
 
-public class CustomerImpl implements CRUDFacade {
+public class CustomerImpl implements Customer {
     @Override
     public void save(String name) {
         System.out.println("Customer " + name + " Saved.");
@@ -21,5 +21,10 @@ public class CustomerImpl implements CRUDFacade {
     @Override
     public void getAll() {
         System.out.println("All Customers loaded.");
+    }
+
+    @Override
+    public void findByAddress(String address) {
+        System.out.println("5 Customers found from " + address);
     }
 }

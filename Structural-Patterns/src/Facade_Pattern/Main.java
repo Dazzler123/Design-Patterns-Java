@@ -14,22 +14,24 @@ public class Main {
         * If there is common repetitive methods in modules, put them into an interface and make it
          the parent of the relevant modules.
 
-        * Here in the example, both Customer and Item can similar methods with common logics (CRUD operations).
+        * Here in this example, both Customer and Item have similar methods with common logics (CRUD operations).
           So we removed those methods and put them on an interface and make it as the parent for both Customer
           & Item.
      */
 
     public static void main(String[] args) {
-        CRUDFacade customer = new CustomerImpl();
+        Customer customer = new CustomerImpl();
         customer.save("Dazzler");
         customer.update("Dazzler");
         customer.delete("D001");
+        customer.findByAddress("Gampaha");
 
         System.out.println("========================================");
 
-        CRUDFacade item = new ItemImpl();
+        Item item = new ItemImpl();
         item.save("Biscuits");
         item.update("Biscuits");
         item.delete("ITM-001");
+        item.findByQtyOnHand(40);
     }
 }
