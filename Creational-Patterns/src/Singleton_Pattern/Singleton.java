@@ -16,16 +16,7 @@ public class Singleton {
 
             //assign a new object to the static instance
             instance = new Singleton();
-
-            //this statement will be printed if the instance is null which means
-            //that it's the first time this class is executed
-            System.out.println("First time executed.");
         }
-
-        //this statement will be printed if the instance is not null which means
-        //that it's not the first time this class is executed
-        System.out.println("Not the first time executed.");
-
         return instance;
     }
 }
